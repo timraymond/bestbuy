@@ -13,12 +13,13 @@ module BestBuy
     # @param api_key[String] The API key required by the BestBuy API
     # @param endpoint[String] The endpoint of the API that this request will be made against. Must be one of VALID_ENDPOINTS
     # @param filters[Array<String>] Filters that will be applied to the particular resource being requested.
-    def initialize(api_key:, endpoint:, filters: [])
+    def initialize(api_key:, endpoint:, affiliate_tracking_id: nil, filters: [])
       unless VALID_ENDPOINTS.include? endpoint
         fail APIError, "The endpoint \"#{endpoint}\" is currently unsupported. Supported endpoints are: #{VALID_ENDPOINTS.join(", ")}"
       end
       @endpoint = endpoint
       @filters = filters
+      @affiliate_tracking_id = affiliate_tracking_id
       @api_key = api_key
       @show_params = []
     end
@@ -64,10 +65,18 @@ module BestBuy
         api_key_param,
         format_param,
         show_param,
+        affiliate_param,
       ].compact.sort.join("&")
     end
 
     private
+
+    # Inserts the query string parameter responsible for crediting affiliate links
+    def affiliate_param
+      if @affiliate_tracking_id
+        "LID=#{@affiliate_tracking_id}"
+      end
+    end
 
     # Controls the apiKey query string parameter
     def api_key_param
