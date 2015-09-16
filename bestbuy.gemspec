@@ -18,10 +18,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'multi_json'
+  spec.add_dependency 'multi_json', "~> 1.11"
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "yard"
+  spec.add_development_dependency "rspec", "~> 3.3"
+  spec.add_development_dependency "yard", "~> 0"
 end
