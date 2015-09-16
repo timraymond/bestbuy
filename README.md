@@ -2,6 +2,8 @@
 
 The BestBuy gem lets you request information from the BestBuy API in your Ruby applications. The API requires you to have an API key before you can make any requests, so make sure you obtain one [here](https://remix.mashery.com/member/register) first.
 
+**Disclaimer**: I am not affiliated with Best Buy in any way. I built this because it was useful to me and I'm releasing it in the hopes that it will be useful to others.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -48,7 +50,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/bestbuy.
+Bug reports and pull requests are welcome on GitHub at https://github.com/timraymond/bestbuy.
 
 
 ## License
