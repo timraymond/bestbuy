@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bestbuy/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bestbuy"
+  spec.name          = "best_buy"
   spec.version       = BestBuy::VERSION
   spec.authors       = ["Timothy Raymond"]
   spec.email         = ["traymond@reviewed.com"]

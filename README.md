@@ -9,7 +9,7 @@ The BestBuy gem lets you request information from the BestBuy API in your Ruby a
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bestbuy'
+gem 'best_buy'
 ```
 
 And then execute:
@@ -25,7 +25,7 @@ Or install it yourself as:
 First, require the BestBuy gem where you want to make requests to the API using:
 
 ```
-require 'best_buy'
+require 'bestbuy'
 ```
 
 Next, you will need to instantiate a `BestBuy::Client` with your API key:
